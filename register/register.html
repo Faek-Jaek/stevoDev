@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/register/register.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <section id="topSvgContainer">
+            <svg xmlns="http://www.w3.org/2000/svg" width="390" height="216" viewBox="0 0 390 216" fill="none" style="margin-top: 5px;">
+                <path d="M154.361 121.616C118.747 103.217 0.17839 216.108 0.17839 216.108L0.178345 0.773438H390.178V124.043C390.178 124.043 379.666 102.567 352.301 100.307C324.935 98.0478 278.824 160.232 226.609 155.101C174.395 149.97 189.975 140.016 154.361 121.616Z" fill="#F1666A"/>
+            </svg >
+            <svg xmlns="http://www.w3.org/2000/svg" width="390" height="216" viewBox="0 0 390 216" fill="none">
+                <path d="M154.361 121.038C118.747 102.638 0.17839 215.53 0.17839 215.53L0.178345 0.195312H390.178V123.465C390.178 123.465 379.666 101.989 352.301 99.7291C324.935 97.4697 278.824 159.653 226.609 154.523C174.395 149.392 189.975 139.437 154.361 121.038Z" fill="#ED1C24"/>
+            </svg>
+        </section>
+        <nav>
+            <a href="/"><img src="/static/logos/stevoLogoTopWhite.png"></a>
+            <button onclick="openMenu()"><img src="/static/icons/menu.png"></button>
+        </nav>
+    </header>
+    <main>
+        <h1>Already a Member? <a href="/login/login.html">Sign In Here!</a></h1>
+        <section id="regFieldSection">
+            <form>
+                <div id="firstNameText" style='display: inherit;' class="page1">First Name</div>
+                <input type="text" id="firstName" class="field, page1" style='height: 5vh;display: inherit;' required>
+
+                <div id="lastNameText" style='display: inherit;' class="page1">Last Name</div>
+                <input type="text" id="lastName" class="field, page1" style='height: 5vh;display: inherit;' required>
+                
+                <div id="emailText" style='display: inherit;' class="page1">Email Address</Address></div>
+                <input type="email" id="email" class="field, page1" style='height: 5vh;display: inherit;' required>
+                
+                <div id="phoneNumberText" class="page2">Phone Number</div>
+                <input type="tel" name="phone" class="field, page2" required>
+                
+                <div id="passwordText" class="page2">Password</div>
+                <input type="password" name="password" class="field, page2" required>
+                
+                <div id="referralText" class="page2">Referral Code</div>
+                <input type="text" id="referral" class="field, page2" required>
+                
+                
+                <section id="checkboxSection" class="page2">
+                    <h2>Is this a buisinessAccount?</h2>
+                    <input type="checkbox" id='checkbox' onclick="buisAccScript()">
+                </section>
+                
+                <div id="businessNameText" class="page3">Business Name</div>
+                <input type="text" id="businessName" name="businessName" class="field, page3" required>
+                
+                <div id="industryText" class="page3">Industry</div>
+                <select id="industry" aria-label="Industry" name="Industry" data-invalid="true" aria-invalid="true" class="field, page3" required>
+                    <option class="select-option" value="" disabled=""></option>
+                    <option class="select-option" value="Architect" tabindex="-1">Architect</option>
+                    <option class="select-option" value="Building (New Construction/Custom)" tabindex="-1">Building (New Construction/Custom)</option>
+                    <option class="select-option" value="Building (Restoration/Remodeling)" tabindex="-1">Building (Restoration/Remodeling)</option>
+                    <option class="select-option" value="Business Maintenance (Manufacturing/Warehousing/Distribution)" tabindex="-1">Business Maintenance (Manufacturing/Warehousing/Distribution)</option>
+                    <option class="select-option" value="Business Maintenance (Retail/Restaurant/Professional Services)" tabindex="-1">Business Maintenance (Retail/Restaurant/Professional Services)</option>
+                    <option class="select-option" value="Demolition" tabindex="-1">Demolition</option>
+                    <option class="select-option" value="Electrician (Wiring/Lighting/AV)" tabindex="-1">Electrician (Wiring/Lighting/AV)</option>
+                    <option class="select-option" value="Exporter" tabindex="-1">Exporter</option>
+                    <option class="select-option" value="Fire/Safety" tabindex="-1">Fire/Safety</option>
+                    <option class="select-option" value="Flooring" tabindex="-1">Flooring</option>
+                    <option class="select-option" value="General Contractor" tabindex="-1">General Contractor</option>
+                    <option class="select-option" value="HVAC" tabindex="-1">HVAC</option>
+                    <option class="select-option" value="Interior Designer" tabindex="-1">Interior Designer</option>
+                    <option class="select-option" value="Landscaper (Architect/Design/Maintenance)" tabindex="-1">Landscaper (Architect/Design/Maintenance)</option>
+                    <option class="select-option" value="Masonry (Stone/Concrete)" tabindex="-1">Masonry (Stone/Concrete)</option>
+                    <option class="select-option" value="Millwork (Cabinetry/Doors &amp; Windows)" tabindex="-1">Millwork (Cabinetry/Doors &amp; Windows)</option>
+                    <option class="select-option" value="Not Defined" tabindex="-1">Not Defined</option><option class="select-option" value="Painter" tabindex="-1">Painter</option>
+                    <option class="select-option" value="Plumber" tabindex="-1">Plumber</option>
+                    <option class="select-option" value="Property Management (Facility/Commercial/Retail/Medical)" tabindex="-1">Property Management (Facility/Commercial/Retail/Medical)</option>
+                    <option class="select-option" value="Property Management (Hospitality/Recreation)" tabindex="-1">Property Management (Hospitality/Recreation)</option>
+                    <option class="select-option" value="Property Management (Multi and/or Single Family Home)" tabindex="-1">Property Management (Multi and/or Single Family Home)</option>
+                    <option class="select-option" value="Purchasing Agency" tabindex="-1">Purchasing Agency</option>
+                    <option class="select-option" value="Pool Contractor/Maintenance" tabindex="-1">Pool Contractor/Maintenance</option>
+                    <option class="select-option" value="Realtor" tabindex="-1">Realtor</option>
+                    <option class="select-option" value="Roofer" tabindex="-1">Roofer</option>
+                    <option class="select-option" value="Schools (for Profit)" tabindex="-1">Schools (for Profit)</option>
+                    <option class="select-option" value="Church" tabindex="-1">Church</option>
+                    <option class="select-option" value="Non-Profit" tabindex="-1">Non-Profit</option>
+                </select>
+                
+                <div id="addressText" class="page3" required>Business Address</div>
+                <input type="address" name="address" id="address" class="field, page3">
+                
+                <section id="nextSection">
+                    <button type="button" id="back" onclick="backReg()" style='visibility: hidden; width: 0;'>Back</button>
+                    <button type="button" id="next" onclick="nextReg()">Next</button>
+                </section>
+                <script src="/register/register.js"></script>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <i class="tools"></i>
+    </footer>
+</body>
+</html>
