@@ -61,6 +61,7 @@ main {
     margin-top: 18vh;
     text-align: center;
     gap: 1rem;
+    z-index: 4;
 }
 footer {
     height: 20vh;

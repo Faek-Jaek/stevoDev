@@ -7,10 +7,8 @@ function nextReg() {
     console.log(index+' to '+ (index+1));
     if (index === 0) {
         document.querySelectorAll('.page1').forEach(item => {
-            if (item.value !== '') {
-                item.style.height = '0';
-                item.style.display = 'none';
-            }
+            item.style.height = '0';
+            item.style.display = 'none';
         });
 
         index++;
@@ -20,10 +18,10 @@ function nextReg() {
             item.style.display = 'inherit';
         });
 
-        nextButton.style.width = '20vw';
+        nextButton.style.width = '20%';
         nextButton.innerText = 'Submit';
 
-        backButton.style.width = '10vw';
+        backButton.style.width = '10%';
         backButton.style.visibility = 'visible';
 
         checkboxSection.style.visibility = 'visible';
@@ -101,7 +99,6 @@ function checkReferral() {
         document.getElementById('referral').value = referral;
     }
 }
-
 
 
 document.addEventListener('onload', checkReferral());
