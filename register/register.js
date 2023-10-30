@@ -40,10 +40,10 @@ function nextReg() {
             nextButton.innerText = 'Submit';
             index++;
         } else {
-            document.forms[0].submit();
+            collectFormData();
         }
     } else if (index === 2) {
-        document.forms[0].submit();
+        collectFormData();
 
     }
 }
@@ -99,6 +99,44 @@ function checkReferral() {
         document.getElementById('referral').value = referral;
     }
 }
+function collectFormData() {
+    
+    // Create an object to store the form data
+    var userData = {};
+  
+    // Select all input elements within the form
+    var formInputs = document.querySelectorAll('.field');
 
+    // Iterate over the input elements and add their values to the userData object
+    formInputs.forEach(input => {
+      userData[input.id] = input.value;
+    });
+
+    // Convert the userData object to a JSON string
+    var jsonData = JSON.stringify(userData);
+    
+    // Send the JSON data to your Express server using an HTTP request
+    fetch('/user', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: jsonData,
+    })
+    .then(response => {
+      if (response.ok) {
+        // Handle a successful response from the server
+        console.log('Data sent successfully');
+      } else {
+        // Handle any errors from the server
+        console.error('Failed to send data');
+      }
+    })
+    .catch(error => {
+      // Handle any network errors
+      console.error('Network error:', error);
+    });
+    
+}
 
 document.addEventListener('onload', checkReferral());

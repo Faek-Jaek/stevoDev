@@ -25,36 +25,36 @@
     <main>
         <h1>Already a Member? <a href="/login/login.html">Sign In Here!</a></h1>
         <section id="regFieldSection">
-            <form id='form'>
+            <form id='form' onsubmit="collectFormData()">
                 <div id="firstNameText" style='display: inherit;' class="page1">First Name</div>
-                <input type="text" id="firstName" class="field, page1" style='height: 5vh;display: inherit;' required>
+                <input type="text" id="firstName" name="firstName" class="field page1" style='height: 5vh;display: inherit;' required>
 
                 <div id="lastNameText" style='display: inherit;' class="page1">Last Name</div>
-                <input type="text" id="lastName" class="field, page1" style='height: 5vh;display: inherit;' required>
+                <input type="text" id="lastName" name="lastName" class="field page1" style='height: 5vh;display: inherit;' required>
                 
                 <div id="emailText" style='display: inherit;' class="page1">Email Address</Address></div>
-                <input type="email" id="email" class="field, page1" style='height: 5vh;display: inherit;' required>
+                <input type="email" id="email" name="email" class="field page1" style='height: 5vh;display: inherit;' required>
                 
                 <div id="phoneNumberText" class="page2">Phone Number</div>
-                <input type="tel" name="phone" class="field, page2" required>
+                <input type="tel" id="phone" name="phone" class="field page2" required>
                 
                 <div id="passwordText" class="page2">Password</div>
-                <input type="password" name="password" class="field, page2" required>
+                <input type="password" id="password" name="password" class="field page2" required>
                 
                 <div id="referralText" class="page2">Referral Code</div>
-                <input type="text" id="referral" class="field, page2" required>
+                <input type="text" id="referral" name="referral" class="field page2" required>
                 
                 
                 <section id="checkboxSection" class="page2">
                     <h2>Is this a buisinessAccount?</h2>
-                    <input type="checkbox" id='checkbox' onclick="buisAccScript()">
+                    <input type="checkbox" id='checkbox' name='businessAccount' onclick="buisAccScript()">
                 </section>
                 
                 <div id="businessNameText" class="page3">Business Name</div>
-                <input type="text" id="businessName" name="businessName" class="field, page3" required>
+                <input type="text" id="businessName" name="businessName" class="field page3" required>
                 
                 <div id="industryText" class="page3">Industry</div>
-                <select id="industry" aria-label="Industry" name="Industry" data-invalid="true" aria-invalid="true" class="field, page3" required>
+                <select aria-label="Industry" id="Industry" name="Industry" data-invalid="true" aria-invalid="true" class="field page3" required>
                     <option class="select-option" value="" disabled=""></option>
                     <option class="select-option" value="Architect" tabindex="-1">Architect</option>
                     <option class="select-option" value="Building (New Construction/Custom)" tabindex="-1">Building (New Construction/Custom)</option>
@@ -87,7 +87,7 @@
                 </select>
                 
                 <div id="addressText" class="page3" required>Business Address</div>
-                <input type="address" name="address" id="address" class="field, page3">
+                <input type="address" name="address" id="address" class="field page3">
                 
                 <section id="nextSection">
                     <button type="button" id="back" onclick="backReg()" style='visibility: hidden; width: 0;'>Back</button>
